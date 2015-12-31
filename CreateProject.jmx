@@ -115,14 +115,14 @@
                 <elementProp name="UserName" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">true</boolProp>
                   <stringProp name="Argument.name">UserName</stringProp>
-                  <stringProp name="Argument.value">rakesh.shukla@silicus.com</stringProp>
+                  <stringProp name="Argument.value">surekha.jadhav@silicus.com</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
                 <elementProp name="Password" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">true</boolProp>
                   <stringProp name="Argument.name">Password</stringProp>
-                  <stringProp name="Argument.value">Silicus@123</stringProp>
+                  <stringProp name="Argument.value">Surekha@123</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
@@ -180,6 +180,15 @@
                 </elementProp>
               </collectionProp>
             </HeaderManager>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">Logoff</stringProp>
+              <stringProp name="RegexExtractor.regex">&quot;__RequestVerificationToken&quot; type=&quot;hidden&quot; value=&quot;(.+?)&quot;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <stringProp name="RegexExtractor.match_number"></stringProp>
+            </RegexExtractor>
             <hashTree/>
           </hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="229 /User/UserDashboard" enabled="true">
@@ -292,7 +301,7 @@
                 <elementProp name="newProject[Name]" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">true</boolProp>
                   <stringProp name="Argument.name">newProject[Name]</stringProp>
-                  <stringProp name="Argument.value">RaksTest1</stringProp>
+                  <stringProp name="Argument.value">SurekhaTest1</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
@@ -499,7 +508,7 @@
                 <elementProp name="__RequestVerificationToken" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.name">__RequestVerificationToken</stringProp>
-                  <stringProp name="Argument.value">bpFjDfD0WUAoXKalE7IYhgOVLtOs22EXe0-7hMui3mptWX75lmfYDT5OP-PsrasCMwlbXTa7k173ATLHbsFhAtsb5CCJAGXJXK5vtKbq-jQLIurYDo99EObsvxY1jaVqwZBP2Q2</stringProp>
+                  <stringProp name="Argument.value">${Logoff}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
